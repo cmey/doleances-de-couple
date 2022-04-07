@@ -1,0 +1,30 @@
+{
+  "name": "doleances-de-couple",
+  "version": "0.1",
+  "description": "doleances-de-couple (uses Node.js app using Express 4)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.1",
+    "express": "~4.9.x",
+    "jade": "^1.8.1",
+    "mongoose": "^3.8.20",
+    "sendgrid": "^1.4.0",
+    "socket.io": "^1.2.1"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}

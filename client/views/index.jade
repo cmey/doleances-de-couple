@@ -1,0 +1,15 @@
+extends layout
+
+block body
+	h1= title
+	p Doléances de couple
+
+	p Intérêt du site
+
+	p Détail de la méthode
+
+	script(type='text/javascript', src='//code.jquery.com/jquery-1.9.1.min.js')
+	script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js')
+
+	input(type='text', data-ng-model='name')
+	| {{name}}

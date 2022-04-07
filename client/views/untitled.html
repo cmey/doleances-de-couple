@@ -1,0 +1,92 @@
+<!doctype html>
+<html ng-app="doleancesApp">
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Doléances de couple
+    </title>
+
+    <!-- Load jQuery and AngularJS from the CDN. -->
+    <script
+        type="text/javascript"
+        src="http://code.jquery.com/jquery-1.9.1.min.js">
+    </script>
+    <script
+        type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js">
+    </script>
+    <script
+        type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular-resource.js">
+    </script>
+</head>
+<body>
+ 
+    <h1>
+        Doléances de couple
+    </h1>
+ 
+    <script type="text/javascript" src="/js/app.js"></script
+    <script type="text/javascript" src="/js/controllers/select-controller.js"> </script>
+
+    <div ng-controller="selectController">    
+
+    <form ng-submit="finish()">
+        
+        <select
+            ng-model="selectionAnger"
+            ng-options="option.value as option.text for option in optionsAnger">
+            <option value="">- - Make Selection - -</option>
+        </select>        
+        <!-- <p ng-show="selectedAnger"> {{ selectedAnger.name }} </p> -->
+        <input type="text" placeholder="{{ selectedAnger.name }}" ng-model="textAnger" size="40"/>
+        <p/>
+
+        <select
+            ng-model="selectionSadness"
+            ng-options="option.value as option.text for option in optionsSadness">
+            <option value="">- - Make Selection - -</option>
+        </select>
+        <!-- <p ng-show="selectedSadness"> {{ selectedSadness.name }} la suite de tristesse</p> -->
+        <input type="text" placeholder="{{ selectedSadness.name }}" ng-model="textSadness" size="40"/>
+        <p/>
+
+        <!-- <select
+            ng-model="selectionInquiétude"
+            ng-options="option.value as option.text for option in options">
+            <option value="">- - Make Selection - -</option>
+        </select>
+        {{ debut-inquiétude }} la suite de inquiétude
+
+        <select
+            ng-model="selectionRegret"
+            ng-options="option.value as option.text for option in options">
+            <option value="">- - Make Selection - -</option>
+        </select>
+        {{ debut-regret }} la suite de regret
+
+        <select
+            ng-model="selectionAmour"
+            ng-options="option.value as option.text for option in options">
+            <option value="">- - Make Selection - -</option>
+        </select>
+        {{ debut-amour }} la suite de amour -->
+
+        <button type="submit"> Fini !! </button>
+    </form>
+ 
+    <!-- Load the app module and its classes. -->
+    <script type="text/javascript">
+
+        // Define our AngularJS application module.
+        var doleancesApp = angular.module( "doleancesApp", [] );
+        
+        // // I am the main controller for the application.
+        // doleancesApp.controller(
+        //     "selectController",
+        //     selectController
+        // );
+    </script>
+    </div>
+</body>
+</html>
